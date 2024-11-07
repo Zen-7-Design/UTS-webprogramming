@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Deal - Rental Mobil</title>
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style>
+    /* Custom styles */
+    body { padding-top: 56px; } /* Offset for sticky navbar */
+
+    a {
+        text-decoration: none;
+    }
+
+    #backToTopBtn {
+    position: fixed; /* Ensures the button stays in place */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    display: none; /* Button will be hidden initially */
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    z-index: 1000; /* Keeps the button on top of other content */
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/LOGO.png" alt="Car Deal Logo" width="30" height="30" class="d-inline-block align-text-top">
+        Car Deal
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="profile.html">Profil </a></li>
+          <li class="nav-item"><a class="nav-link" href="ourteam.html">Tim Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak Kami</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel Section -->
+  <section id="carousel" class="container-fluid p-0">
+    <div id="carDealCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/avanza.jpg" class="img-fluid" alt="Car 1">
+        </div>
+        <div class="carousel-item">
+          <img src="img/mx3.jpg" class="img-fluid" alt="Car 2">
+        </div>
+        <div class="carousel-item">
+          <img src="img/yaris.jpg" class="img-fluid" alt="Car 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carDealCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carDealCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- Button back to top -->
+  <button id="backToTopBtn" class="btn btn-dark">⬆ Top</button>
+
+<!-- Custom CSS for Back to Top Button -->
+<style>
+  #backToTopBtn {
+    position: fixed; /* Ensures the button stays in place */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    display: block; /* Set to 'block' for testing; change back to 'none' if it works */
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    z-index: 1000; /* Keeps the button on top of other content */
+  }
+</style>
+
+<!-- JavaScript for Back to Top Functionality -->
+<script>
+  // Get the button
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  // Show the button when the user scrolls down 100px
+  window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  // Scroll to the top when the button is clicked
+  backToTopBtn.onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
+
+  <!-- Jenis Mobil Section -->
+  <section id="car-types" class="container my-5">
+    <h2 class="text-center mb-4">Jenis Mobil</h2>
+    <div class="row">
+      <!-- Toyota Yaris -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="img/yaris.jpg" class="card-img-top" alt="Toyota Yaris">
+          <div class="card-body">
+            <h5 class="card-title">Toyota Yaris</h5>
+
+          </div>
+        </div>
+      </div>
+      <!-- Toyota Avanza -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="img/avanza.jpg" class="card-img-toph-75" alt="Toyota Avanza">
+          <div class="card-body">
+            <h5 class="card-title">Toyota Avanza</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Mazda MX3 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="img/mx3.jpg" class="card-img-top h-75" alt="Mazda MX3">
+          <div class="card-body">
+            <h5 class="card-title">Mazda MX3</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Daihatsu Xenia -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="img/xenia.jpg" class="card-img-top h-75" alt="Daihatsu Xenia">
+          <div class="card-body">
+            <h5 class="card-title">Daihatsu Xenia</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<br>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="container my-5">
+    <h2 class="text-center mb-4">User Reviews</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Slamet Kopling</h5>
+            <p class="card-text">"Mobilnya sangat responsif apalagi saat saya menyewa Mazda 3, Kopling nya sangat mantap jawir."</p>
+            <div class="text-warning">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Yanto asli Pasuruan Bumi Gempa</h5>
+            <p class="card-text">"Saya Yanto sama istri saya Yanti udah 2 bulan gunain nih Jasa, emang top icikiwir!"</p>
+            <div class="text-warning">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Kevin Lontong</h5>
+            <p class="card-text">"Makan Lontong sate itu enak apalagi saat mudik dan sewa di jasa Car deal sembari makan sate lontong, enak banget"</p>
+            <div class="text-warning">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br><br><br><br>
+
+
+
+  <!-- Pricing Packages Section -->
+<section id="pricing-packages" class="container my-5">
+    <h2 class="text-center mb-4">Pricing Packages</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header text-center">
+            <h3>Daily Rental</h3>
+            <p class="price">Rp 1.000.000 / day</p>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Termasuk asuransi dasar</li>
+              <li>Biaya per kilometer tambahan</li>
+              <li>Support layanan 24/7</li>
+            </ul>
+            <button class="btn btn-primary w-100">Choose Package</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header text-center">
+            <h3>Weekly Rental</h3>
+            <p class="price">Rp 5.500.000 / week</p>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Termasuk asuransi dasar</li>
+              <li>Biaya per kilometer tambahan</li>
+              <li>Support layanan 24/7</li>
+              <li>Diskon 10% untuk sopir</li>
+            </ul>
+            <button class="btn btn-primary w-100">Choose Package</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header text-center">
+            <h3>Monthly Rental</h3>
+            <p class="price">Rp 20.000.000 / month</p>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Termasuk asuransi penuh</li>
+              <li>Kilometer tak terbatas</li>
+              <li>Support layanan 24/7</li>
+              <li>Diskon 20% untuk sopir</li>
+            </ul>
+            <button class="btn btn-primary w-100">Choose Package</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loyalty Program Section -->
+<section id="loyalty-program" class="container my-5">
+    <h2 class="text-center mb-4">Loyalty Program & Rewards</h2>
+    <p class="text-center mb-5">Nikmati berbagai keuntungan sebagai pelanggan setia kami! Semakin sering Anda menyewa, semakin banyak reward yang bisa Anda dapatkan.</p>
+    
+    <div class="row">
+      <!-- Bronze Tier -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <div class="card-header bg-bronze text-white">
+            <h3>Bronze Member</h3>
+          </div>
+          <div class="card-body">
+            <p class="price">Setelah 5 Sewa</p>
+            <ul class="list-unstyled">
+              <li>5% Diskon pada sewa berikutnya</li>
+              <li>Prioritas penjadwalan</li>
+              <li>Voucher snack dan minuman</li>
+            </ul>
+            <button class="btn btn-outline-primary">Join Program</button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Silver Tier -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <div class="card-header bg-silver text-white">
+            <h3>Silver Member</h3>
+          </div>
+          <div class="card-body">
+            <p class="price">Setelah 10 Sewa</p>
+            <ul class="list-unstyled">
+              <li>10% Diskon pada sewa berikutnya</li>
+              <li>Gratis upgrade kelas mobil</li>
+              <li>Prioritas dukungan pelanggan</li>
+            </ul>
+            <button class="btn btn-outline-primary">Join Program</button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Gold Tier -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <div class="card-header bg-gold text-white">
+            <h3>Gold Member</h3>
+          </div>
+          <div class="card-body">
+            <p class="price">Setelah 20 Sewa</p>
+            <ul class="list-unstyled">
+              <li>15% Diskon pada sewa berikutnya</li>
+              <li>Mobil pengganti jika ada masalah</li>
+              <li>Gratis sopir selama 1 hari</li>
+              <li>Exclusive 24/7 support</li>
+            </ul>
+            <button class="btn btn-outline-primary">Join Program</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Custom CSS for Loyalty Program Colors -->
+  <style>
+    .bg-bronze { background-color: #cd7f32; }
+    .bg-silver { background-color: #c0c0c0; }
+    .bg-gold { background-color: #ffd700; }
+  </style>
+  
+  
+<br><br><br><br>
+
+  <!-- Form Register Section -->
+  <section id="register" class="container my-5">
+    <h2 class="text-center mb-4">Form Pendaftaran Rental Mobil</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Nama Lengkap</label>
+        <input type="text" class="form-control" id="name" placeholder="Masukkan Nama Anda" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Masukkan Email Anda" required>
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Nomor Telepon</label>
+        <input type="tel" class="form-control" id="phone" placeholder="Masukkan Nomor Telepon Anda" required>
+      </div>
+      <div class="mb-3">
+        <label for="car" class="form-label">Pilih Mobil</label>
+        <select class="form-select" id="car" required>
+          <option value="" disabled selected>Pilih Mobil</option>
+          <option value="toyota_yaris">Toyota Yaris</option>
+          <option value="toyota_avanza">Toyota Avanza</option>
+          <option value="mazda_mx3">Mazda MX3</option>
+          <option value="daihatsu_xenia">Daihatsu Xenia</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="rental-duration" class="form-label">Durasi Rental (hari)</label>
+        <input type="number" class="form-control" id="rental-duration" placeholder="Masukkan Durasi Rental" required>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Daftar Sekarang</button>
+    </form>
+  </section>
+
+  <!-- Chat Section -->
+  <section id="chat" class="container my-5 width" width="50%">
+    <h2 class="text-center mb-4">Online Chat</h2>
+    <div class="card">
+      <div class="card-body">
+        <p class="text-muted text-center">Punya pertanyaan? Tanyakan di sini!</p>
+        <textarea class="form-control mb-3" rows="3" placeholder="Ketik pesan Anda..."></textarea>
+        <div class="text-center">
+          <button class="btn btn-success">Kirim</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br><br><br><br>
+
+  <!-- FAQ Section -->
+<section id="faq" class="container my-5">
+    <h2 class="text-center mb-4">Frequently Asked Questions (FAQ)</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Apa saja persyaratan untuk menyewa mobil?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Anda perlu menunjukkan KTP atau SIM yang valid serta melakukan pembayaran di muka untuk menyewa mobil.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Apakah ada biaya tambahan jika terlambat mengembalikan mobil?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ya, akan dikenakan biaya tambahan jika Anda terlambat mengembalikan mobil sesuai waktu yang telah disepakati.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Apakah ada opsi untuk menyewa mobil dengan sopir?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ya, kami menyediakan layanan sopir untuk penyewaan mobil dengan biaya tambahan.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Bagaimana kebijakan pembatalan rental mobil?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Pembatalan dapat dilakukan hingga 24 jam sebelum waktu sewa dengan pengembalian dana penuh. Setelah itu, akan dikenakan biaya pembatalan.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br><br><br><br>
+
+  <!-- Location Section -->
+  <section id="location" class="container my-5">
+    <h2 class="text-center mb-4">Location</h2>
+    <div class="ratio ratio-16x9">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63364.9728167306!2d109.61974226164552!3d-6.889836601606477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb9c3b68f903f%3A0x3027a76e352bc30!2sPekalongan%2C%20Pekalongan%20City%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1696306722869!5m2!1sen!2sid" allowfullscreen></iframe>
+    </div>
+  </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+          <!-- Logo and Slogan -->
+          <div class="mb-3">
+            <img src="img/LOGO.png  " alt="Car Deal Logo" width="50" height="50" class="d-inline-block align-text-top">
+            <p class="mt-2">"Solusi Terbaik untuk Kebutuhan Mobilitas Anda"</p>
+          </div>
+    
+          <!-- Social Media Links -->
+          <div class="mb-3">
+            <a href="https://www.facebook.com/enterprise" class="text-white mx-2" target="_blank">
+              <i class="bi bi-facebook"></i> Facebook
+            </a>
+            <a href="https://twitter.com/hertz" class="text-white mx-2" target="_blank">
+              <i class="bi bi-twitter"></i> Twitter
+            </a>
+            <a href="https://www.threads.net/anyrentalcompany" class="text-white mx-2" target="_blank">
+              <i class="bi bi-threads"></i> Threads
+            </a>
+            <a href="https://www.tiktok.com/@avis" class="text-white mx-2" target="_blank">
+              <i class="bi bi-tiktok"></i> TikTok
+            </a>
+            <a href="https://www.tiktok.com/@689trans" class="text-white mx-2" target="_blank">
+              <i class="bi bi-reddit"></i> Reddit
+            </a>
+            <a href="https://www.snapchat.com/add/anyrentalcompany" class="text-white mx-2" target="_blank">
+              <i class="bi bi-snapchat"></i> Snapchat
+            </a>
+          </div>
+    
+          <!-- Copyright -->
+          <p class="small">&copy; 2024 Car Deal. All Rights Reserved.</p>
+        </div>
+      </footer>
+    
+      <!-- Bootstrap Icons (optional) -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
